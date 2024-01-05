@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+      }
+      .main {
+        width: 100%;
+        height: 100%;
+        background-color: #d0d4d5;
+      }
+      .nav {
+        width: 100%;
+        height: 110px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 23px;
+      }
+      .nav img {
+        height: 35px;
+      }
+      .nav1 {
+        display: flex;
+        margin-right: 290px;
+        align-items: center;
+        justify-content: center;
+      }
+      .nav1 h4 {
+        padding: 10px;
+      }
+      .nav2 {
+        display: flex;
+        font-size: 23px;
+        gap: 30px;
+        margin-right: 100px;
+      }
+      .content {
+        width: 100%;
+        height: calc(100% - 110px);
+        /* background-color: rgb(20, 20, 20); */
+        display: flex;
+      }
+      .left {
+        width: 40%;
+        height: 100%;
+        background-color: #d0d4d5;
+        padding: 2vw 4vw;
+      }
+      .left h6 {
+        font-size: 1.4vw;
+        font-weight: 100;
+        color: gray;
+      }
+      .left p {
+        font-size: 1.2vw;
+        font-weight: 100;
+        color: gray;
+        width: 90%;
+
+        letter-spacing: 2px;
+        padding-bottom: 43px;
+      }
+      .left h1 {
+        font-size: 4vw;
+        font-weight: 600;
+     
+        line-height: 65px;
+        text-transform: uppercase;
+        padding: 6px 0px 10px 0px;
+      }
+      .left button {
+        background-color: black;
+        color: white;
+        padding: 13px 30px;
+        border: none;
+        border-radius: 20px;
+        border-top-left-radius: 0px;
+        
+      }
+      .right {
+        width: 60%;
+        height: 100%;
+        /* background-color: rgb(216, 13, 125); */
+        padding: 93px 23px;
+       white-space: nowrap;
+       overflow-x: auto;
+    
+      }
+      .right::-webkit-scrollbar{
+        display:none;
+      }
+      .elem{
+        width: 280px;
+        height: 380px;
+        background-color: aliceblue;
+        position: relative;
+        border-radius: 6px;
+       
+        box-shadow: 0 5px 10px rgb(0, 0, 0,0.3);
+        display: inline-block;
+        margin-right: 30px;
+        
+      }
+      .elem img {
+        position: absolute;
+        width: 100%;
+        height: 70%;
+        object-fit: cover;
+        top: 10%;
+      }
+      .elem h4{
+        position: absolute;
+        bottom:0;
+        right: 0;
+        background-color:gray;
+        color: black;
+        padding: 12px 20px;
+        border-top-left-radius: 6px;
+        border-bottom-left-radius: 6px;
+      }
+      .elem h5{
+        font-size: 13px;
+        position: absolute;
+        bottom:11.2%;
+        right: 0;
+        background-color :black;
+        color:white;
+        padding: 12px 20px;
+        border-top-left-radius: 6px;
+        border-bottom-left-radius: 6px;
+        border-top-right-radius: 6px;
+      }
+
+      .sp{
+        display: none;
+      
+        font-size: 43px;
+        position: absolute;
+     right: 8%;
+      }
+      .sp [name='cl']{
+        display: none;
+      }
+      @media (max-width:998px) {
+        .nav{
+          position: relative;
+          z-index: 999;
+        }
+        .nav1{
+          position: absolute;
+          width: 100%;
+          height: 50vh;
+          background-color:black;
+          color: white;
+          top: 70%;
+       
+          left: 0;
+          gap: 10px;
+          display: flex;
+          /* justify-content: center; */
+          align-items: center;
+          flex-direction: column;
+          text-align: center;
+          opacity: 0;
+          visibility: hidden;
+          pointer-events: none;
+          transform: translateX(100%);
+     
+          
+        }
+        .nav1 h4{
+          display: flex;
+          text-align: center;
+          flex-direction: column;
+       
+        }
+        .nav2{
+          display: none;
+        }
+        .sp{
+          display: block;
+          
+        }
+        .active .nav1{
+          opacity: 1;
+          visibility: visible;
+          pointer-events: all;
+          transform: translateX(0%);
+          
+        }
+        .active .sp [name='cl']{
+          display: block;
+          color: aliceblue;
+        }
+        .active .sp [name='me']{
+          display: none;
+        }
+        .content{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+        .left{
+          width: 100%;
+          text-align: center;
+         
+        }
+        .left h6{
+         font-size: 23px;
+         
+        }
+        .left p{
+          font-size: 19px;
+        }
+        .left h1{
+          font-size: 23px;
+        }
+        .right{
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="nav ">
+        <img src="./or.png" alt="" />
+        <div class="nav1">
+          <h4>HOME</h4>
+          <h4>MEN</h4>
+          <h4>WOMEN</h4>
+          <h4>COLLECTION</h4>
+          <h4>CONTACT</h4>
+        </div>
+        <div class="nav2">
+          <i class="ri-search-line"></i>
+          <i class="ri-shopping-cart-line"></i>
+          <i class="ri-menu-4-fill"></i>
+          
+        </div>
+        <div class="sp">
+          <i class="ri-menu-5-line" name="me"></i>
+          <i class="ri-close-line" name="cl"></i>
+        </div>
+      </div>
+      <div class="content">
+        <div class="left">
+          <h6>Explore The Limited Edition</h6>
+          <h1>Nike Limited Edition</h1>
+          <p>
+            Lore officia optio, repellat quam cumque quaerat tenetur blanditiis
+            possimus quisquam dignissimos praesentium deserunt. Explicabo quidem
+            vitae quae itaque, similique quibusdam!
+          </p>
+          <button>SHOP NOW</button>
+        </div>
+        <div class="right">
+            <div class="elem">
+                <img src="https://ncrsport.com/img/storage/large/AO4054-600-1.jpg" alt="">
+                <h4>LeBron Solider 12(Men)</h4>
+                <h5>Men Basket Ball Sheos</h1>
+            </div>
+            <div class="elem">
+              <img src="https://ncrsport.com/img/storage/large/AO4054-600-1.jpg" alt="">
+              <h4>LeBron Solider 12(Men)</h4>
+              <h5>Men Basket Ball Sheos</h1>
+          </div><div class="elem">
+            <img src="https://ncrsport.com/img/storage/large/AO4054-600-1.jpg" alt="">
+            <h4>LeBron Solider 12(Men)</h4>
+            <h5>Men Basket Ball Sheos</h1>
+        </div>
+        <div class="elem">
+          <img src="https://ncrsport.com/img/storage/large/AO4054-600-1.jpg" alt="">
+          <h4>LeBron Solider 12(Men)</h4>
+          <h5>Men Basket Ball Sheos</h1>
+      </div><div class="elem">
+        <img src="https://ncrsport.com/img/storage/large/AO4054-600-1.jpg" alt="">
+        <h4>LeBron Solider 12(Men)</h4>
+        <h5>Men Basket Ball Sheos</h1>
+    </div><div class="elem">
+      <img src="https://ncrsport.com/img/storage/large/AO4054-600-1.jpg" alt="">
+      <h4>LeBron Solider 12(Men)</h4>
+      <h5>Men Basket Ball Sheos</h1>
+  </div>
+        
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="script.js"></script>  </body>
+</html>
